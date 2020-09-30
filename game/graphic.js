@@ -26,6 +26,14 @@ function init()
     ground = new Ground(0xffffff, WIDTH, HEIGHT, 10);
     
     player1 = new Player("player1", 0xffff00, new THREE.Vector2(50, 0), 0);
+
+    noGround.forEach(element => {
+      if ((element[0] == player1.position.x) && (element[1] == player1.position.y)) {
+        var index = noGround.indexOf(element);
+        noGround.splice(index, 1);
+      } 
+    });
+
     scene.add(player1.graphic);
 
     xenemy = Math.floor(Math.random() * HEIGHT);
