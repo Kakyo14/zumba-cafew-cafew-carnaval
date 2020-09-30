@@ -4,7 +4,7 @@ var Enemy = function(name, color, position, direction) {
   this.position = position;
   this.life = 0;
   this.direction = direction;
-  this.speed = 0.05;
+  this.speed = 1;
 
   this.material = new THREE.MeshLambertMaterial({
       color: color,
@@ -39,13 +39,6 @@ Enemy.prototype.move = function () {
   );
 
   this.position = moveTo;
-
-  if (this.speed > 0) {
-      this.speed = this.speed - 0.04;
-  }
-  else if (this.speed < 0) {
-      this.speed = this.speed + 0.04;
-  }
 
   this.graphic.position.x = this.position.x;
   this.graphic.position.y = this.position.y;
