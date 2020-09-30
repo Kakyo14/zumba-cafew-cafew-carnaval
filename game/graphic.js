@@ -32,7 +32,7 @@ function init()
     yenemy = Math.floor(Math.random() * WIDTH);
 
     console.log(xenemy);
-    enemy1 = new Enemy("enemy1", 0xff0000, new THREE.Vector2(xenemy, yenemy));
+    enemy1 = new Enemy("enemy1", 0xff0000, new THREE.Vector2(xenemy, yenemy), 0);
     scene.add(enemy1.graphic);
 
 
