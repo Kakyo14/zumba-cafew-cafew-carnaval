@@ -36,8 +36,8 @@ function init()
 
     scene.add(player1.graphic);
 
-    xenemy = Math.floor(Math.random() * HEIGHT);
-    yenemy = Math.floor(Math.random() * WIDTH);
+    xenemy = Math.floor(Math.random() * WIDTH);
+    yenemy = Math.floor(Math.random() * HEIGHT);
 
     enemy1 = new Enemy("enemy1", 0xff0000, new THREE.Vector2(xenemy, yenemy), 0);
     scene.add(enemy1.graphic);
