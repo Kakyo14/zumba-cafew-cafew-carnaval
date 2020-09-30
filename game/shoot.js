@@ -108,6 +108,10 @@ function player_falling()
 
         element = noGround[i];
 
+        if (!element){
+          player1.dead();
+          break;
+      }
 
         var tileX = (element[0]) | 0;
         var tileY = (element[1]) | 0;
